@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #444;
+    background-color: #fdfaf6;
+    padding: 0;
+}
+
+header {
+    background-color: #e6b3b3;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+header h2 {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #f9f9f9;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 35px;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+    font-size: 1.05em;
+}
+
+h3 {
+    font-size: 2em;
+    color: #925a66;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e6b3b3;
+    padding-bottom: 8px;
+}
+
+h4 {
+    font-size: 1.4em;
+    color: #7a3e47;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: '👰 ';
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.agenda-item {
+    background-color: #fff9f9;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #f0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.agenda-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.event-actions {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #e6b3b3;
+    color: #ffffff;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 0 12px 15px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.button:hover {
+    background-color: #d4a0a0;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-map {
+    background-color: #a3cc99;
+}
+
+.button-map:hover {
+    background-color: #92b988;
+}
+
+footer {
+    background-color: #925a66;
+    color: #fdfaf6;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 0.95em;
+    border-top: 1px solid #7a3e47;
+}
+
+footer p {
+    margin-bottom: 8px;
+    color: #fdfaf6;
+}
+
+footer a {
+    color: #e6b3b3;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header h2 {
+        font-size: 1.3em;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .banner-image {
+        margin-bottom: 25px;
+    }
+
+    .agenda-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .button {
+        display: block;
+        width: calc(100% - 40px);
+        margin: 0 auto 18px auto;
+        padding: 15px 20px;
+        border-radius: 8px;
+    }
+
+    .event-actions {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 12px 18px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media print {
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #000;
+        background-color: #fff;
+    }
+
+    a.button,
+    footer a {
+        display: none !important;
+    }
+
+    .banner-image {
+        display: none !important;
+    }
+
+    header, footer {
+        background-color: #fff;
+        color: #000;
+        text-align: left;
+        padding: 10px 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    h1, h2, h3, h4 {
+        color: #000;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    main {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .agenda-grid {
+        display: block;
+    }
+
+    .agenda-item {
+        background-color: #fff;
+        border: 1px solid #eee;
+        margin-bottom: 10px;
+        box-shadow: none;
+    }
+
+    p, li {
+        font-size: 11pt;
+        margin-bottom: 8px;
+    }
+}
